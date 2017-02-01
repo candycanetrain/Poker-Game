@@ -56,4 +56,23 @@ describe Array do
       expect(rows.my_transpose).to eq(cols)
     end
   end
+
+end
+
+describe "Stock Picker" do
+  it "returns most profitable pair of days" do
+    expect(stock_picker([4,5,1,7,4,6,9]).to eq([2,6])
+  end
+
+  it "returns empty array if no profitable pairs" do
+    expect(stock_picker([6,5,4,3,2,1]).to eq([])
+  end
+
+  it "returns empty array if no profitable pairs" do
+    expect(stock_picker([4,4,4,4]).to eq([])
+  end
+
+  it "returns first pair of profitable days if there are two equal pairs" do
+    expect(stock_picker([1,9,4,5,1,2,9]).to eq([0,1])
+  end
 end

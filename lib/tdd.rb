@@ -20,5 +20,16 @@ class Array
     result
   end
 
+  def my_transpose
+    result = []
+    (0...self.length).each do |i|
+      subarray = []
+      (0...self.length).each do |j|
+        subarray << self[j][i]
+      end
+      result << subarray
+    end
+    result
+  end
 
 end
