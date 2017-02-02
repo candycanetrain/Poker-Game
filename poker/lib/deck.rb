@@ -31,6 +31,14 @@ class Deck
     @cards.shuffle
 
   end
+  def take_five
+    @cards.pop(5) if @cards.count >=5 
+    #remove 5 from deck and return it
+
+    #updates deck
+
+  end
+
 
   private
   def populate

@@ -20,7 +20,7 @@ describe "Deck" do
     end
 
   end
-  describe "shuffle" do
+  describe "#shuffle" do
 
     it "shuffles the cards in the deck and return cards in new positions" do
      expect(deck.cards).not_to eq(deck.cards.shuffle)
@@ -29,7 +29,16 @@ describe "Deck" do
   end
 
 
-  # describe take_five
+  describe "#take_five" do
+    it "returns five cards" do
+      expect(deck.take_five.count).to eq(5)
+    end
+
+    it "updates the deck" do
+      deck.take_five
+      expect(deck.cards.count).to eq(47)
+    end
+  end
 
 
 end
